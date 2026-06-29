@@ -40,13 +40,22 @@ const Header = ({ cartCount = 0 }) => {
           Dev E-COM
         </Link>
 
-        <nav className="d-none d-md-flex gap-4 fw-medium header-nav-links">
+        {/* <nav className="d-none d-md-flex gap-4 fw-medium header-nav-links">
           <Link to="/products" className="text-secondary text-decoration-none">
             Products
           </Link>
-        </nav>
+        </nav> */}
 
         <div className="d-flex gap-3 header-actions">
+          <div className="header-wishlist-cart-btn pt-2">
+            <Link to="/products">
+
+            
+            <button type="button">
+              <i className="icon-list"></i>
+            </button>
+            </Link>
+          </div>
           <div className="header-wishlist-cart-btn pt-2">
             <Link to="/cart">
 

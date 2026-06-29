@@ -24,19 +24,19 @@ const ProductCard = ({ product }) => {
 
 
 
-<div className="mb-4">
-            <div className="products-style1__single products-style1__single--best-seller">
-                <div className="products-style1__single-img">
-                    <div className="inner">
-                        <img src={imageSrc} alt={product.title} />
+      <div className="mb-4">
+        <div className="products-style1__single products-style1__single--best-seller">
+          <div className="products-style1__single-img">
+            <div className="inner">
+              <img src={imageSrc} alt={product.title} />
 
-                        <div className="overlay-img">
-                            <img src={imageSrc} alt={product.title} />
-                        </div>
+              <div className="overlay-img">
+                <img src={imageSrc} alt={product.title} />
+              </div>
 
-                        <div className="overlay-box">
-                            <ul>
-                                <li>
+              <div className="overlay-box">
+                <ul>
+                  {/* <li>
                                     <button type="button">
                                         <span className="icon-heart"></span>
                                     </button>
@@ -45,40 +45,43 @@ const ProductCard = ({ product }) => {
                                     <button type="button">
                                         <span className="icon-up-and-down-arrows"></span>
                                     </button>
-                                </li>
-                                <li>
-                                    <button type="button">
-                                        <span className="icon-view"></span>
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                                </li> */}
+                  <li>
+                    <Link to={`/product/${product.id}`}>
+                      <button type="button">
+                        <span className="icon-view"></span>
+                      </button>
+                    </Link>
 
-                    {/* {badge && (
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* {badge && (
                         <div className="text-box">{badge}</div>
                     )} */}
-                </div>
+          </div>
 
-                <div className="products-style1__single-content">
-                  <Link to={`/product/${product.id}`}>
-               <h3>{product.title}</h3>
+          <div className="products-style1__single-content">
+            <Link to={`/product/${product.id}`}>
+              <h3>{product.title}</h3>
             </Link>
-                   
 
-                    <p>
-                        ${product.price}{" "}
-                        <del>${product.price}</del>
-                    </p>
 
-                    <div className="btn-box" >
-                        <button className="btn-one" onClick={handleAddToCart}>
-                            <span className="txt">Add to Cart</span>
-                        </button>
-                    </div>
-                </div>
+            <p>
+              ${product.price}{" "}
+              <del>${product.price}</del>
+            </p>
+
+            <div className="btn-box" >
+              <button className="btn-one" onClick={handleAddToCart}>
+                <span className="txt">Add to Cart</span>
+              </button>
             </div>
+          </div>
         </div>
+      </div>
 
 
 
