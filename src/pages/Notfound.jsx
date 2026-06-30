@@ -9,7 +9,7 @@ function NotFound() {
             {/* 404 Number */}
             <h1 className="display-1 fw-bold text-danger">404</h1>
 
-            {/* Heading */}
+            {/* Heading.. */}
             <h2 className="fw-semibold mb-3">
               Oops! That page can't be found
             </h2>
