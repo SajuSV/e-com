@@ -33,7 +33,11 @@
             background: var(--thm-white);
             padding: 0px 0px 110px;
         }
-
+@media (max-width: 767.98px) {
+    .products-style3 {
+            padding: 0px 0px 40px;
+        }
+}
         .products-style3__content {
             position: relative;
             display: block;
@@ -50,7 +54,14 @@
             padding-left: 40px;
         }
 
-
+@media (max-width: 767.98px) {
+    .banner-box-style1 {
+            min-height: unset;
+            padding-top: 40px;
+            padding-left: 40px;
+            padding-bottom: 40px;
+        }
+}
         .banner-box-style1 h3 {
             color: var(--thm-white);
             font-size: 18px;

@@ -226,7 +226,7 @@ export default function Home({ slides = defaultSlides, autoPlayDelay = 8000 }) {
 
                     <div className="row">
                         {categoryList.map((category) => (
-                            <li key={category.id} className="col">
+                            <li key={category.id} className="col-xl-3 col-lg-4 col-md-6 col-6">
                                 <CategoryCard categories={category} />
                             </li>
                         ))}

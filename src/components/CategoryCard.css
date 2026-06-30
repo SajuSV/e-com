@@ -9,7 +9,12 @@
             padding: 140px 0px 90px;
             z-index: 1;
         }
+@media (max-width: 767.98px) {
+    .medicine-categories {
 
+            padding: 70px 0px 40px;
+        }
+}
         .medicine-categories__top {
             position: relative;
             display: flex;
@@ -169,7 +174,14 @@
             font-weight: 600;
             text-transform: capitalize;
         }
-
+@media (max-width: 767.98px) {
+    .medicine-categories__single-title {
+            margin-top: 5px;
+        }
+    .medicine-categories__single-title h2 {
+            font-size: 18px;
+        }
+}
         .medicine-categories__single-title h2 a {
             color: var(--thm-black);
         }
