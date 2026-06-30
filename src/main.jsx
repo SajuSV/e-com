@@ -13,7 +13,7 @@ import ProductDetails from "./pages/ProductDetails.jsx";
 import Cart from "./pages/Cart.jsx";
 import { CartProvider } from "./context/CartContext.jsx";
 import Home from "./pages/Home.jsx";
-import NotFound from "./pages/NotFound.jsx";
+import NotFound from "./pages/Notfound.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
