@@ -83,6 +83,7 @@
     position: relative;
     display: inline-flex;
     align-items: center;
+    white-space: nowrap;
     z-index: 1;
 }
 
@@ -104,3 +105,10 @@
     z-index: 1;
 }
 
+@media (max-width: 767.98px) {
+    .btn-one .txt {
+        font-size: 11px;
+        white-space: nowrap;
+        z-index: 1;
+    }
+}

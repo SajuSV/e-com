@@ -10,8 +10,7 @@ function Footer() {
 
       <Link
         to="/"
-        className="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none"
-        aria-label="Bootstrap"
+        className="col-md-4 d-flex align-items-center justify-content-center mb-0 text-decoration-none"
       >
         DEV E-COM
       </Link>
