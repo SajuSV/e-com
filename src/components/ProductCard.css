@@ -1,0 +1,232 @@
+
+/* Card wrapper + best-seller modifier */
+.products-style1__single {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.products-style1__single--best-seller {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 7px;
+    margin-bottom: 24px;
+    z-index: 1;
+}
+
+.products-style1__single--best-seller:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 1px solid #e6e7e9;
+    border-radius: 7px;
+    transition: all 200ms linear 0.1s;
+    z-index: -1;
+}
+
+.products-style1__single--best-seller:hover:before {
+    border-color: var(--thm-primary-color);
+}
+
+.products-style1__single--best-seller .products-style1__single-img {
+    padding: 1px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    overflow: hidden;
+}
+
+.products-style1__single--best-seller .products-style1__single-img .inner:before,
+.products-style1__single--best-seller .products-style1__single-img .inner:after {
+    display: none;
+}
+
+.products-style1__single--best-seller .products-style1__single-content {
+    padding-top: 25px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+}
+
+.products-style1__single--best-seller .products-style1__single-img .overlay-box>ul>li {
+    margin-bottom: 5px;
+}
+
+/* Image block */
+.products-style1__single-img {
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+.products-style1__single-img .text-box {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+    background: #e94220;
+    color: var(--thm-white);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: var(--thm-font);
+}
+
+.products-style1__single-img .overlay-box {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    opacity: 0;
+    transform: perspective(400px) rotateX(20deg) translateX(100%);
+    transform-origin: bottom;
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transition-property: all;
+    z-index: 5;
+}
+
+.products-style1__single:hover .products-style1__single-img .overlay-box {
+    opacity: 1.0;
+    transform: perspective(400px) rotateX(0deg) translateX(0%);
+    transition-delay: .3s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transition-property: all;
+}
+
+.products-style1__single-img .overlay-box>ul>li {
+    position: relative;
+    display: block;
+    width: 100%;
+    float: none;
+    margin-bottom: 15px;
+}
+
+.products-style1__single-img .overlay-box>ul>li:last-child {
+    margin-bottom: 0px;
+}
+
+/* NOTE: selector changed from "li a" to "li button" to match the JSX <button> elements */
+.products-style1__single-img .overlay-box>ul>li button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--thm-black);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.products-style1__single-img .overlay-box>ul>li button:hover {
+    background-color: var(--thm-primary-color);
+}
+
+.products-style1__single-img .overlay-box>ul>li button span {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 15px;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.products-style1__single-img .inner {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.products-style1__single-img .inner img {
+    width: 100%;
+}
+
+.products-style1__single-img .inner .overlay-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.products-style1__single:hover .products-style1__single-img .inner .overlay-img {
+    width: 100%;
+}
+
+.products-style1__single-img .inner .overlay-img img {
+    transform: translatex(50%) scalex(2);
+    opacity: 0;
+    filter: blur(10px);
+    object-fit: cover;
+    transition: all 0.5s ease-in-out 0.3s;
+}
+
+.products-style1__single:hover .products-style1__single-img .inner .overlay-img img {
+    transform: translatex(0%) scalex(1);
+    opacity: 0.30;
+    filter: blur(0px);
+}
+
+/* Content */
+.products-style1__single-content {
+    position: relative;
+    display: block;
+    padding-top: 25px;
+}
+
+.products-style1__single-content h3 {
+    color: var(--thm-black);
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 13px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.products-style1__single-content p {
+    color: var(--thm-primary-color);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 28px;
+    font-family: var(--thm-font-2);
+}
+
+.products-style1__single-content p del {
+    position: relative;
+    display: inline-block;
+    padding-left: 3px;
+    color: #868686;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: var(--thm-font);
+}
+
+.products-style1__single-content .btn-box {
+    position: relative;
+    display: block;
+    margin-top: 30px;
+}
+
+

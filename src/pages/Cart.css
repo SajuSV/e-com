@@ -1,0 +1,340 @@
+
+
+/*** 
+=============================================
+   Cart area  style
+=============================================
+***/
+.cart-area {
+    position: relative;
+    display: block;
+    padding-top: 133px;
+    padding-bottom: 140px;
+    background-color: var(--thm-white);
+    z-index: 10;
+}
+
+.cart-table-box {
+    position: relative;
+    display: block;
+}
+
+.cart-info {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 14px;
+}
+
+.cart-info .left {
+    position: relative;
+    display: block;
+}
+
+.cart-info .left span {
+    color: var(--thm-black);
+    font-weight: 500;
+}
+
+.cart-info .right {
+    color: var(--thm-black);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cart-info .right span {
+    color: var(--thm-primary-color);
+}
+
+.cart-table-box .table-outer {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e5e5e5;
+    border-bottom: none;
+    border-right: none;
+    border-radius: var(--thm-border-radius);
+}
+
+.cart-table-box .cart-table {
+    min-width: 1024px;
+    width: 100%;
+}
+
+.cart-table-box .cart-table .cart-header {
+    position: relative;
+    width: 100%;
+    background: var(--thm-gray-bg);
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.cart-table-box .cart-table tbody {
+    position: relative;
+}
+
+
+.cart-table-box .cart-table thead tr th {
+    color: var(--thm-black);
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 600;
+    text-transform: capitalize;
+    min-width: 160px;
+    padding: 22px 40px;
+    text-align: center;
+    font-family: var(--thm-font-2);
+    border-right: 1px solid #e5e5e5;
+}
+
+.cart-table-box .cart-table thead tr th.hide-me {
+    display: table-column;
+}
+
+.cart-table-box .cart-table tbody tr {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+
+.cart-table-box .cart-table tbody tr td {
+    min-width: 160px;
+    padding: 35px 40px;
+    border-right: 1px solid #e5e5e5;
+}
+
+.cart-table-box .cart-table thead tr th.prod-column {
+    position: relative;
+}
+
+.cart-table-box .cart-table tbody tr .prod-column .column-box {
+    position: relative;
+    min-height: 80px;
+}
+
+.cart-table-box .cart-table tbody tr .prod-column .column-box .prod-thumb {
+    width: 80px;
+}
+
+.cart-table-box .cart-table tbody tr .prod-column .column-box .prod-thumb a {
+    position: relative;
+    display: block;
+}
+
+.cart-table-box .cart-table tbody tr .prod-column .column-box .prod-thumb a img {
+    width: 100%;
+}
+
+.cart-table-box .cart-table tbody tr .prod-column .column-box .prod-thumb,
+.cart-table-box .cart-table tbody tr .prod-column .column-box .title {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.cart-table-box .cart-table tbody tr .prod-column .column-box .title {
+    padding-left: 30px;
+}
+
+.cart-table-box .cart-table tbody tr .prod-column .column-box .title h3 {
+    color: var(--thm-black);
+    font-size: 19px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+
+.cart-table-box .cart-table tbody tr .qty .input-group.bootstrap-touchspin {
+    position: relative;
+    width: 70px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.cart-table-box .cart-table tbody tr .qty input.quantity-spinner.form-control {
+    position: relative;
+    display: block;
+    padding: 0;
+    width: 70px;
+    height: 50px;
+    flex: none;
+    color: var(--thm-black);
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #e5e5e5;
+    border-radius: var(--thm-border-radius);
+    outline: none;
+    margin: 0 auto;
+    text-align: center;
+    font-family: var(--thm-font-2);
+    box-shadow: none;
+    margin-left: 0 !important;
+}
+
+.cart-table-box .cart-table tbody tr .qty .bootstrap-touchspin .input-group-btn-vertical {
+    display: none !important;
+}
+
+.cart-table-box .cart-table tbody tr td.price {
+    color: var(--thm-body-font-color);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    font-family: var(--thm-font);
+}
+
+.cart-table-box .cart-table tbody tr .sub-total {
+    color: var(--thm-primary-color);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    font-family: var(--thm-font);
+}
+
+
+
+.cart-table-box .cart-table tbody tr td .remove {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.cart-table-box .cart-table tbody tr td .remove span {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #e5e5e5;
+    border-radius: var(--thm-border-radius);
+    color: var(--thm-body-font-color);
+    font-size: 16px;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    z-index: 1;
+}
+
+.cart-table-box .cart-table tbody tr td .remove:hover span {
+    color: #ffffff;
+}
+
+.cart-table-box .cart-table tbody tr td .remove span::after {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    right: -1px;
+    content: "";
+    border-radius: var(--thm-border-radius);
+    z-index: -1;
+    transform: scale(0.0);
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
+    background: var(--thm-primary-color);
+}
+
+.cart-table-box .cart-table tbody tr td .remove:hover span::after {
+    transform: scaleX(1.0);
+}
+
+
+
+.cart-button-box {
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cart-button-box .apply-coupon {
+    position: relative;
+    display: block;
+}
+
+.cart-button-box .apply-coupon .inner {
+    position: relative;
+    display: block;
+    padding-left: 270px;
+}
+
+.cart-button-box .apply-coupon input[type="text"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 270px;
+    height: 60px;
+    border: 1px solid #e5e5e5;
+    color: var(--thm-body-font-color);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 20px;
+    text-transform: capitalize;
+    transition: all 500ms ease 0s;
+    font-family: var(--thm-font);
+}
+
+.cart-button-box .apply-coupon input[type="text"]:focus {
+    border: 1px solid #222222
+}
+
+.cart-button-box .apply-coupon .apply-coupon-button {
+    position: relative;
+    display: block;
+    margin-left: 20px;
+}
+
+.cart-button-box .apply-coupon .apply-coupon-button button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--thm-black);
+    line-height: 50px;
+}
+
+.cart-button-box .apply-coupon .apply-coupon-button button:hover {
+    color: #ffffff;
+}
+
+.cart-button-box .apply-coupon .apply-coupon-button button:after {
+    background-color: var(--thm-gray-bg);
+    border: 1px solid var(--thm-border-color);
+}
+
+
+.update-cart-btn-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.update-cart-btn-box button {
+    line-height: 50px;
+}
+
+.update-cart-btn-box button+button {
+    margin-left: 20px;
+}
+
+.update-cart-btn-box button.black {
+    color: #ffffff;
+}
+
+.update-cart-btn-box button.black:after {
+    background-color: var(--thm-black);
+}
+
+.update-cart-btn-box button.black:before {
+    background-color: var(--thm-primary-color);
+}
+
+

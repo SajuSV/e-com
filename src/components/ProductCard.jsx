@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useCart } from "../context/useCart.jsx";
 import { useCallback } from "react";
+import "./ProductCard.css";
 
 const FALLBACK_IMAGE =
   "https://placehold.co/600x600/e2e8f0/475569?text=No+Image+Available";
@@ -16,12 +17,6 @@ const ProductCard = ({ product }) => {
 
   return (
     <>
-
-
-
-
-
-
 
 
       <div className="mb-4">
@@ -58,9 +53,9 @@ const ProductCard = ({ product }) => {
               </div>
             </div>
 
-            {/* {badge && (
-                        <div className="text-box">{badge}</div>
-                    )} */}
+            {product.specialtag && (
+              <div className="text-box">{product.specialtag}</div>
+            )}
           </div>
 
           <div className="products-style1__single-content">
@@ -71,13 +66,20 @@ const ProductCard = ({ product }) => {
 
             <p>
               ${product.price}{" "}
-              <del>${product.price}</del>
+              <del>${product.actprice}</del>
             </p>
 
-            <div className="btn-box" >
-              <button className="btn-one" onClick={handleAddToCart}>
-                <span className="txt">Add to Cart</span>
-              </button>
+            <div className="btn-box">
+              {product.availability === "out-of-stock" ? (
+                <div className="w-100 bg-secondary text-center py-3 text-uppercase">
+                  <span className="txt text-white">Sold Out</span>
+                </div>
+                  
+              ) : (
+                <button className="btn-one" onClick={handleAddToCart}>
+                  <span className="txt">Add to Cart</span>
+                </button>
+              )}
             </div>
           </div>
         </div>

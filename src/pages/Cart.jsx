@@ -2,6 +2,7 @@ import CartItem from "../components/CartItem.jsx";
 import { useCart } from "../context/useCart.jsx";
 import { useNavigate, useParams } from "react-router-dom";
 import Breadcrumb from "../components/Breadcrumb.jsx";
+import "./Cart.css";
 
 function Cart() {
   const { cartItems, cartTotal, removeFromCart } = useCart();
@@ -10,7 +11,7 @@ function Cart() {
   if (cartItems.length === 0) {
     return (
       <div className="text-center mt-5 pt-5">
-        <h2 className="fs-2 fw-semibold">Your cart is empty</h2>
+        <h2 className="fs-2 fw-semibold vh-100">Your cart is empty</h2>
       </div>
     );
   }

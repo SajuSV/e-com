@@ -45,7 +45,7 @@ function CartItem({ item, quantity, onRemove }) {
                 </div>
               </td>
 
-              <td className="qty">
+              <td className="price">
                 {/* <div className="input-box">
                   <input
                     className="quantity-spinner"

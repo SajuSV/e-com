@@ -1,0 +1,271 @@
+.header-wishlist-cart-btn {
+    position: relative;
+    display: flex;
+    margin-right: 10px;
+}
+
+.header-wishlist-cart-btn button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(var(--thm-border-rgb-color), .10);
+    border-radius: 50%;
+    color: var(--thm-black);
+    font-size: 22px;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+
+.header-wishlist-cart-btn button+button {
+    margin-left: 20px;
+}
+
+.header-wishlist-cart-btn button:hover {
+    border: 1px solid rgba(var(--thm-border-rgb-color), .90);
+}
+
+.header-wishlist-cart-btn button .count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--thm-primary-color);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: var(--thm-font);
+}
+
+
+
+.header-search-box {
+    position: relative;
+    display: block;
+    width: 300px;
+}
+
+.header-search-box .form-group {
+    position: relative;
+    display: block;
+}
+
+.header-search-box .form-group input[type='search'] {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 60px;
+    color: var(--thm-black);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--thm-font);
+    background: #ffffff;
+    border: 1px solid rgb(231, 231, 231);
+    padding-left: 30px;
+    padding-right: 60px;
+    border-radius: 30px;
+    transition: background-color 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.header-search-box .form-group button {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    width: 60px;
+    height: 58px;
+    line-height: 58px;
+    color: var(--thm-black);
+    font-size: 18px;
+    padding: 0;
+    background: transparent;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: all 300ms ease 100ms;
+}
+
+.header-search-box .form-group input[type="search"]::-webkit-input-placeholder {
+    color: var(--thm-black);
+}
+
+.header-search-box .form-group input[type="search"]:-moz-placeholder {
+    color: var(--thm-black);
+}
+
+.header-search-box .form-group input[type="search"]::-moz-placeholder {
+    color: var(--thm-black);
+}
+
+.header-search-box .form-group input[type="search"]:-ms-input-placeholder {
+    color: var(--thm-black);
+}
+
+.header-search-box .form-group input[type="search"]:focus {
+    color: #000000;
+}
+
+.header-search-box .form-group input[type="search"]:focus+button,
+.header-search-box .form-group button:hover {
+    color: #fff;
+    background-color: var(--thm-black);
+}
+
+/* Tablet: 768px–991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .header-search-box {
+        width: 220px;
+    }
+
+    .header-search-box .form-group input[type='search'] {
+        height: 50px;
+        padding-left: 20px;
+        padding-right: 50px;
+    }
+
+    .header-search-box .form-group button {
+        width: 50px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 16px;
+    }
+
+    .header-wishlist-cart-btn {
+        margin-right: 15px;
+    }
+
+    .header-wishlist-cart-btn button {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .header-wishlist-cart-btn button+button {
+        margin-left: 12px;
+    }
+}
+
+/* The cancel/close button lives inside the search box but only ever shows on mobile when open */
+.header-search-cancel {
+    display: none;
+}
+
+/* The icon-only search trigger is mobile-only; hidden on tablet/desktop where the full box already shows */
+.header-search-toggle {
+    display: none;
+}
+
+/* Mobile: up to 767px */
+@media only screen and (max-width: 1200px) {
+    .shop-sidebar-box {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+}
+
+/* Mobile: up to 767px */
+@media only screen and (max-width: 767px) {
+    .header-row {
+        position: relative;
+        row-gap: 12px;
+    }
+
+    .header-actions {
+        align-items: center;
+    }
+
+    .header-wishlist-cart-btn {
+        margin-right: 10px;
+    }
+
+
+
+    /* Default mobile state: show a compact search icon button, hide the full input box */
+    .header-search-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(var(--thm-border-rgb-color), .10);
+        border-radius: 50%;
+        background: transparent;
+        color: var(--thm-black);
+        font-size: 18px;
+        padding: 0;
+    }
+
+    .header-wishlist-cart-btn button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .header-search-box {
+        display: none;
+        width: 100%;
+    }
+
+    .header-search-box .form-group input[type='search'] {
+        height: 47px;
+        font-size: 14px;
+        padding-left: 18px;
+        padding-right: 84px;
+    }
+
+    .header-search-box .form-group button[type='submit'] {
+        width: 40px;
+        height: 45px;
+        line-height: 42px;
+        font-size: 16px;
+        right: 60px;
+    }
+
+    .header-search-cancel {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        bottom: 1px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        color: var(--thm-black);
+        font-size: 18px;
+        padding: 0;
+    }
+
+    /* When search is open: hide everything else in the row, expand the search box full width */
+    .header-row.mobile-search-active .header-brand,
+    .header-row.mobile-search-active .header-wishlist-cart-btn,
+    .header-row.mobile-search-active .header-search-toggle {
+        display: none;
+    }
+
+    .header-row.mobile-search-active .header-actions {
+        width: 100%;
+    }
+
+    .header-search-box.is-open {
+        display: block;
+        width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .header-search-box.is-open .header-search-cancel {
+        display: flex;
+        height: 45px;
+    }
+
+}

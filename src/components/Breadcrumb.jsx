@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { useNavigate, useParams } from "react-router-dom";
 import shape1 from "../assets/breadcrumb-shape1.png";
 import shape2 from "../assets/breadcrumb-shape2.png";
-
+import "./Breadcrumb.css";
 
 
 function Breadcrumb({ title }) {

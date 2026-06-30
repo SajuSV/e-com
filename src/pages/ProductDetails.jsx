@@ -5,6 +5,7 @@ import { useCart } from "../context/useCart.jsx";
 import shape1 from "../assets/breadcrumb-shape1.png";
 import shape2 from "../assets/breadcrumb-shape2.png";
 import Breadcrumb from "../components/Breadcrumb.jsx";
+import "./ProductDetails.css";
 
 
 const FALLBACK_IMAGE =
@@ -46,9 +47,9 @@ const ProductDetails = () => {
 
   return (
     <>
-    <Breadcrumb  title="Product Details"/>
+      <Breadcrumb title="Product Details" />
 
-      <section  className="container p-5">
+      <section className="container p-5">
         {loading && (
           <div className="position-fixed top-50 start-50 spinner-border text-primary" role="status">
             <span className="visually-hidden">Loading...</span>
@@ -95,21 +96,53 @@ const ProductDetails = () => {
 
                 <div className="product-details-content-box__review">
                   <div className="left-box">
+                    <div className="text pt-2 pe-3">
+                      <p>{product.rating}</p>
+                    </div>
                     <div className="rating-box-style1">
                       <ul className="d-flex">
-                        <li><span className="icon-pointed-star"></span></li>
-                        <li><span className="icon-pointed-star"></span></li>
-                        <li><span className="icon-pointed-star"></span></li>
-                        <li><span className="icon-pointed-star"></span></li>
-                        <li><span className="icon-customer-testimonial"></span></li>
+                        {[1, 2, 3, 4, 5].map((star) => {
+                          const fullStars = Math.floor(product.rating);
+                          const hasHalfStar = product.rating - fullStars >= 0.5;
+
+                          if (star <= fullStars) {
+                            // Full star
+                            return (
+                              <li key={star}>
+                                <span className="icon-pointed-star"></span>
+                              </li>
+                            );
+                          } else if (star === fullStars + 1 && hasHalfStar) {
+                            // Half star
+                            return (
+                              <li key={star}>
+                                <span className="icon-customer-testimonial"></span>
+                              </li>
+                            );
+                          } else {
+                            // Empty star
+                            return (
+                              <li key={star}>
+                                <span className="icon-star"></span>
+                              </li>
+                            );
+                          }
+                        })}
                       </ul>
                     </div>
-                    <div className="text">
-                      <p>25 reviews</p>
-                    </div>
+
                   </div>
                   <div className="right-box">
-                    <p>Status: <span>In Stock</span></p>
+                    <p>
+                      Status:{" "}
+                      <span>
+                        {product.availability === "in-stock"
+                          ? "In Stock"
+                          : product.availability === "low-stock"
+                            ? "Low Stock"
+                            : "Out of Stock"}
+                      </span>
+                    </p>
                   </div>
                 </div>
 
@@ -152,7 +185,7 @@ const ProductDetails = () => {
                 <div className="d-flex justify-content-between">
                   <div className="product-details-content-box__price">
                     <h2>
-                      ${product.price} <del> ${product.price}</del>
+                      ${product.price} <del> ${product.actprice}</del>
                     </h2>
                   </div>
 
@@ -160,10 +193,17 @@ const ProductDetails = () => {
                     <div className="product-quantity-box">
 
 
-                      <div className="btn-box">
-                        <button className="btn-one" type="button" onClick={handleAddToCart}>
-                          <span className="txt">Add to Cart</span>
-                        </button>
+                      <div className="btn-box pt-4">
+                        {product.availability === "out-of-stock" ? (
+                          <div className="w-100 bg-secondary text-center p-3 text-uppercase">
+                            <span className="txt text-white">Sold Out</span>
+                          </div>
+
+                        ) : (
+                          <button className="btn-one" onClick={handleAddToCart}>
+                            <span className="txt">Add to Cart</span>
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>

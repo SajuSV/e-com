@@ -6,6 +6,9 @@ import {
 } from "../services/productService.jsx";
 import ProductCard from "../components/ProductCard.jsx";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import "./Products.css";
+import { categoryList } from "../data/categories.jsx";
+import CategoryCard from "../components/CategoryCard.jsx";
 
 function useDebounce(value, delay = 400) {
   const [debouncedValue, setDebouncedValue] = useState(value);
@@ -42,6 +45,19 @@ const Products = () => {
 
   // Pick up ?search= from the URL (e.g. submitted from the header search box)
   // and keep it in sync if it changes while this page is mounted.
+
+  
+// Pick up ?categoryId= from the URL (e.g. clicked from a CategoryCard)
+useEffect(() => {
+  const categoryIdFromUrl = searchParams.get("categoryId");
+  if (categoryIdFromUrl) {
+    setSelectedCategory(Number(categoryIdFromUrl));
+  } else {
+    setSelectedCategory(null);
+  }
+}, [searchParams]);
+
+
   useEffect(() => {
     const searchFromUrl = searchParams.get("search") || "";
     setSearchTerm(searchFromUrl);
@@ -236,7 +252,6 @@ const Products = () => {
                     </div>
                   </div>
                 </div>
-
                 <div className="row">
                   {loading && (
                     <div

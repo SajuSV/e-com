@@ -1,0 +1,179 @@
+
+        /*------------------------------------------
+  Medicine Categories Css
+--------------------------------------------*/
+        .medicine-categories {
+            position: relative;
+            display: block;
+            background: var(--thm-gray-bg);
+            padding: 140px 0px 90px;
+            z-index: 1;
+        }
+
+        .medicine-categories__top {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 55px;
+        }
+
+        .medicine-categories__top .sec-title {
+            padding-bottom: 0px;
+        }
+
+        .medicine-categories__top .btn-box {
+            position: relative;
+            display: block;
+        }
+
+        .medicine-categories__single {
+            position: relative;
+            display: block;
+            margin-bottom: 38px;
+        }
+
+        .medicine-categories__single-img {
+            position: relative;
+            display: block;
+        }
+
+        .medicine-categories__single-img .inner {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            border: 1px solid transparent;
+            transition: opacity 0.9s ease;
+            transition: all 0.9s ease;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        .medicine-categories__single:hover .medicine-categories__single-img .inner {
+            border: 1px solid var(--thm-primary-color);
+        }
+
+        .medicine-categories__single-img .inner .btn-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.1s ease-in-out 0.1s;
+            z-index: 5;
+        }
+
+        .medicine-categories__single:hover .medicine-categories__single-img .inner .btn-box {
+            opacity: 1;
+            transform: translateX(0px);
+            transition: all 0.6s ease-in-out 0.3s;
+        }
+
+        .medicine-categories__single-img .inner .btn-box a {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            color: var(--thm-black);
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 18px;
+            text-transform: uppercase;
+            font-family: var(--thm-font-2);
+        }
+
+        .medicine-categories__single-img .inner .btn-box a span {
+            position: relative;
+            top: -3px;
+            display: inline-block;
+            padding-left: 10px;
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 700;
+        }
+
+        .medicine-categories__single-img .inner .btn-box a:hover {
+            color: var(--thm-primary-color);
+        }
+
+        .medicine-categories__single-img .inner::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid var(--thm-primary-color);
+            width: 0%;
+            height: 100%;
+            border-radius: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transition: width 0.5s ease;
+            transition: all 0.5s ease;
+            content: "";
+            z-index: 1;
+        }
+
+        .medicine-categories__single:hover .medicine-categories__single-img .inner::before {
+            opacity: 1;
+            visibility: visible;
+            width: 100%;
+        }
+
+        .medicine-categories__single-img .inner img {
+            width: 100%;
+        }
+
+        .medicine-categories__single-img .inner .overlay-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: #ffffff;
+            transition: width 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        .medicine-categories__single:hover .medicine-categories__single-img .inner .overlay-img {
+            width: 100%;
+        }
+
+        .medicine-categories__single-img .inner .overlay-img img {
+            transform: translateX(100%) scaleX(1);
+            opacity: 0;
+            filter: blur(10px);
+            object-fit: cover;
+            transition: all 0.8s ease-in-out 0.1s;
+        }
+
+        .medicine-categories__single:hover .medicine-categories__single-img .inner .overlay-img img {
+            transform: translateX(0%) scaleX(1);
+            opacity: 0.30;
+            filter: blur(0px);
+            transition: all 0.5s ease-in-out 0.3s;
+        }
+
+        .medicine-categories__single-title {
+            position: relative;
+            display: block;
+            text-align: center;
+            margin-top: 31px;
+        }
+
+        .medicine-categories__single-title h2 {
+            font-size: 26px;
+            line-height: 36px;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        .medicine-categories__single-title h2 a {
+            color: var(--thm-black);
+        }
+
+        .medicine-categories__single-title h2 a:hover {
+            color: var(--thm-primary-color);
+        }
